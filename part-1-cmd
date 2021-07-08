@@ -1,0 +1,4 @@
+$ docker container run --name c1 -p 9393:9300 --env CSVSERVER_BORDER=Orange -d infracloudio/csvserver:latest
+$ docker container cp ./inputFile c1:/csvserver/inputdata
+$ docker container start c1
+$ docker container ls -a

@@ -1,0 +1,12 @@
+---
+version: '3.3'
+services:
+  csvserver:
+    container_name: c1
+    ports:
+      - '9393:9300'
+    volumes:
+      - ./inputFile:/csvserver/inputdata:ro
+    environment:
+      - CSVSERVER_BORDER=Orange
+    image: infracloudio/csvserver:latest
